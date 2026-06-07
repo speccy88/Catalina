@@ -2,6 +2,8 @@
 #
 # build LMM/XMM optimizer
 #
+set -e
+
 ./CompileOptimizer catopt_0
 ./CompileOptimizer catopt_1
 ./CompileOptimizer catopt_2

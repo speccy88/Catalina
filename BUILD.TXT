@@ -431,7 +431,7 @@ Install Apple's command line tools and the build utilities used by Catalina:
 If you use Homebrew, the following packages provide the tools expected by the
 build scripts:
 
-   brew install make bison flex gawk ncurses
+   brew install make bison flex gawk ncurses dos2unix
 
 Homebrew may install newer versions of bison, flex or ncurses outside the
 default PATH. If so, add the paths reported by Homebrew to PATH before building.
