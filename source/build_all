@@ -5,10 +5,16 @@
 # this script assumes all the necessary tools (gcc, bison, flex etc) are
 # already installed
 #
+HOST_OS=$(uname -s)
 TMP_LCCDIR=$LCCDIR
 if [[ "$TMP_LCCDIR" == "" ]] ; then
-   TMP_LCCDIR=/opt/catalina
+   if [[ "$HOST_OS" == "Darwin" ]] ; then
+      TMP_LCCDIR=$(cd .. && pwd)
+   else
+      TMP_LCCDIR=/opt/catalina
+   fi
 fi
+export LCCDIR=$TMP_LCCDIR
 #
 if [[ ! -e "$TMP_LCCDIR/bin/catalina_env" ]] ; then
    clear
@@ -42,4 +48,3 @@ cd ..
 #
 echo "Done!"
 #
-
